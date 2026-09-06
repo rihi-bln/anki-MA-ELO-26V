@@ -5,6 +5,63 @@
 > `just --list` to see them. Do not invoke `./ninja`, `./run`, or scripts
 > under `./tools` directly — use the `just` recipes instead.
 
+## Project Goal: Elektro-Meister Anki
+
+Dieses Projekt entwickelt eine Open-Source-Anki-Kartensammlung fuer die
+Elektro-Meisterpruefung Teil I und II. Die Inhalte orientieren sich am
+Rahmenlehrplan Elektromeister Handwerk - Energie- und Gebaeudetechnik und
+sollen zum Unterricht an der HWK Frankfurt (Oder) passen.
+
+Das Deck soll Lerninhalte aus dem Moodle-Unterricht strukturiert, pruefbar und
+fuer andere Lernende zugaenglich machen. Es wird zunaechst intern gepflegt und
+spaeter als anonymisierte oeffentliche Version veroeffentlicht. Eine englische
+Uebersetzung ist als spaetere Ausbaustufe vorgesehen.
+
+### Aktueller Projektstand
+
+- Prioritaet: hoch, Projekt in Arbeit
+- Bestehendes Deck: mehr als 60 Subdecks in 5 Bereichen, 10 Testkarten und 6 Kartentypen
+- Werkzeuge: Anki, AnkiCollab, CrowdAnki, VS Code, Claude Code und GitHub
+
+### Deck-Bereiche
+
+```text
+0-GL-Grundlagen/
+1-Elektro-und-Sicherheitstechnik/
+2-Auftragsabwicklung/
+3-Betriebsfuehrung/
+4-DIN-VDE-Normen/
+```
+
+Subdecks folgen der Namenskonvention `KW-Dozent-HF-Name-Datum`, zum Beispiel
+`36-Vetter-HF3.4-Personal-31.08-04.09`.
+
+### Kartentypen und Fragetemplates
+
+- Multiple Choice: eine oder mehrere korrekte Antworten
+- True/False: Wahr-/Falsch-Aussagen
+- Drag & Drop: Zuordnungsaufgaben
+- Bildverdeckung: Image Occlusion
+- Einfach: klassische Frage und Antwort
+- Lueckentext: Cloze Deletion
+
+Zusaetzlich werden interaktive und fachlich anspruchsvolle Fragetemplates
+entwickelt, insbesondere fuer Zeigerdiagramme, komplexe Zahlen, Strom- und
+Spannungsberechnungen, Schaltplaene und andere Aufgaben, bei denen eine reine
+Textkarte nicht ausreicht. Diese Templates sollen offline in Anki funktionieren
+und mit moeglichst wenig JavaScript auskommen.
+
+### Projektmeilensteine
+
+1. GitHub-Repository und Inhaltsstruktur anlegen
+2. Gemeinsame HTML-/CSS-Basis und Templates fuer die sechs Kartentypen erstellen
+3. Erste Karten aus den Moodle-Unterlagen erstellen und fachlich pruefen
+4. Interaktive Templates fuer Berechnungen und Diagramme als testbare Prototypen umsetzen
+5. Agent-Pipeline fuer automatisierte Kartenerstellung aufsetzen
+
+Bei jeder neuen Funktion sind fachliche Korrektheit, nachvollziehbare Quellen,
+Offline-Nutzung, mobile Darstellung und Kompatibilitaet mit Anki zu pruefen.
+
 ## Project Overview
 
 Anki is a spaced repetition flashcard program with a multi-layered architecture. Main components:
